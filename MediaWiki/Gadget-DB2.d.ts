@@ -19,6 +19,9 @@ declare module 'ext.gadget.DB2' {
     currentTitle: string;
     rootGameDB: WindowLocalStorage;
     DataChange: DataChange;
+    instantDone: boolean;
+    temp: string;
+    api: mw.Api;
     constructor();
     getLocalNamespace(pagename: string): string;
     encode(key: string): string;
@@ -26,6 +29,11 @@ declare module 'ext.gadget.DB2' {
     parseJSON(json: string): JSON;
     instant(): void;
     link(): void;
+    handleError(msg: string,
+      option: NotificationOptions | null,
+      code: string,
+      object?: MWApiHTTPErrorDetails
+    ): void;
   }
   function specialPage(page: string, script: string, title: string): void;
 
