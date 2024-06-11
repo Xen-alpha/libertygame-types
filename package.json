@@ -26,6 +26,7 @@
 	"homepage": "https://github.com/hsl0/libertygame-types#readme",
 	"main": "index.js",
 	"dependencies": {
+		"@babel/types": "^7.24.7",
 		"types-mediawiki": "^1.8.0"
 	},
 	"devDependencies": {
